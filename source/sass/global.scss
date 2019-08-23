@@ -49,14 +49,14 @@ body {
 
 .container {
   position: relative;
-  margin: 0 30px;
+  margin: 0 25px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 50px;
+    margin: 0 40px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1050px;
+    width: 1320px;
     margin: 0 auto;
   }
 }

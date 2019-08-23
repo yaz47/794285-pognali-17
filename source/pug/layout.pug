@@ -1,0 +1,26 @@
+include mixins
+
+doctype html
+html(lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='format-detection" content="telephone=no')
+    link(href='css/style.min.css' rel='stylesheet')
+
+    block title
+      title Сайт
+
+  body
+
+    block header
+      +site-header()
+
+    block content
+      +site-content()
+
+    block footer
+      +site-footer()
+
+    script(src='js/script.min.js')

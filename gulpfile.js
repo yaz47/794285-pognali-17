@@ -27,8 +27,8 @@ const csso = require('gulp-csso');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 
-const posthtml = require('gulp-posthtml');
-const include = require('posthtml-include');
+const pug = require('gulp-pug');
+const prettyHtml = require('gulp-pretty-html');
 const htmlmin = require('gulp-htmlmin');
 
 const browserSync = require('browser-sync').create();
@@ -130,14 +130,24 @@ function createSprite() {
 }
 
 function createBuildHtml() {
-  return src('source/*.html')
-    .pipe(posthtml([
-      include({
-        root: './build/'
-      })
-    ]))
+  return src('source/views/*.pug')
+    .pipe(plumber())
+    .pipe(pug())
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('build'));
+}
+
+function createSourceHtml() {
+  return src('source/views/*.pug')
+    .pipe(plumber())
+    .pipe(pug())
+    .pipe(prettyHtml({
+      indent_size: 2,
+      indent_char: ' ',
+      unformatted: ['code', 'em', 'strong', 'span', 'i', 'b', 'br', 'script'],
+      content_unformatted: [],
+    }))
+    .pipe(dest('source/html'));
 }
 
 function refreshServer(done) {
@@ -171,6 +181,6 @@ exports.js = createBuildJs;
 exports.build = series(
   exports.images, cleanBuild, copyBuild,
   parallel(series(createBuildCss, createSourceCss), createSprite, exports.js),
-  createBuildHtml
+  createBuildHtml, createSourceHtml
 );
 exports.start = series(exports.build, initServer);
