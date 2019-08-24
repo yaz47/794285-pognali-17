@@ -108,7 +108,8 @@ function createBuildJs() {
   return src([
       'source/js/polyfill.js',
       'source/js/script.js',
-      'source/js/picturefill.min.js'
+      'source/js/picturefill.min.js',
+      'source/js/pixelglass.min.js'
     ])
     .pipe(sourcemap.init())
     .pipe(concat('script.min.js'))
@@ -144,7 +145,7 @@ function createSourceHtml() {
     .pipe(prettyHtml({
       indent_size: 2,
       indent_char: ' ',
-      unformatted: ['code', 'em', 'strong', 'span', 'i', 'b', 'br', 'script'],
+      unformatted: ['code', 'em', 'strong', 'span', 'i', 'b', 'br'],
       content_unformatted: [],
     }))
     .pipe(dest('source/html'));

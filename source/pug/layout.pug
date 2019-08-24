@@ -6,11 +6,13 @@ html(lang='ru')
   head
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    meta(name='format-detection" content="telephone=no')
+    meta(name='format-detection' content='telephone=no')
     link(href='css/style.min.css' rel='stylesheet')
 
     block title
       title Сайт
+
+    block pixel-glass
 
   body
 
@@ -18,7 +20,6 @@ html(lang='ru')
       +site-header()
 
     block content
-      +site-content()
 
     block footer
       +site-footer()

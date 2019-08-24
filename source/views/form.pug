@@ -1,4 +1,26 @@
 extends ../pug/layout
 
 block title
-  title Индекс
+  title Погнали - направления
+
+block pixel-glass
+  style.
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url("img/pixel-glass/pognali-form-mobile-modals.jpg");
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+      html {
+        background-image: url("img/pixel-glass/pognali-form-tablet-modals.jpg");
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1440px) {
+      html {
+        background-image: url("img/pixel-glass/pognali-form-desktop-modals.jpg");
+      }
+    }
