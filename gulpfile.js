@@ -127,7 +127,7 @@ function createSprite() {
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(dest('build/img'));
+    .pipe(dest('source/img'));
 }
 
 function createBuildHtml() {
@@ -174,7 +174,7 @@ function initServer() {
   watch('source/js/**/*.js',
     series(exports.js, refreshServer));
   watch('source/img/exclude-sprite/**/*.svg',
-    series(createSprite, createBuildHtml, refreshServer));
+    series(createSprite, createBuildHtml, createSourceHtml, refreshServer));
   watch([
     'source/pug/**/*.pug',
     'source/views/**/*.pug',
