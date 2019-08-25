@@ -1,2 +1,8 @@
 mixin site-header()
-  .site-header Это хедер
+  header(class='site-header')
+    div(class='site-header__container container')
+      include ../site-logo/site-logo
+      if (attributes.isMainPage)
+        +site-logo()(parentClass='site-header__site-logo' linkHref='index.html')
+      else
+        +site-logo()(parentClass='site-header__site-logo')

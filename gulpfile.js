@@ -165,16 +165,21 @@ function initServer() {
     ui: false
   });
 
-  watch('source/sass/**/*.{scss,sass}',
-    series(createBuildCss, createSourceCss));
+  watch([
+    'source/sass/**/*.{scss,sass}',
+    'source/blocks/**/*.{scss,sass}'
+    ], series(createBuildCss, createSourceCss));
   watch('source/img/exclude-original/**',
     series(exports.build, refreshServer));
   watch('source/js/**/*.js',
     series(exports.js, refreshServer));
   watch('source/img/exclude-sprite/**/*.svg',
     series(createSprite, createBuildHtml, refreshServer));
-  watch('source/*.html',
-    series(createBuildHtml, refreshServer));
+  watch([
+    'source/pug/**/*.pug',
+    'source/views/**/*.pug',
+    'source/blocks/**/*.pug'
+    ], series(createBuildHtml, createSourceHtml, refreshServer));
 }
 
 exports.images = series(cleanImages, optimizeImages, createWebp);
