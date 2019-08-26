@@ -19,7 +19,7 @@
 }
 
 .site-about__container {
-  padding: 0 35px 0 25px;
+  padding: 0 20px 0 25px;
 }
 
 .site-about__title {
@@ -32,6 +32,7 @@
 }
 
 .site-about__slogan {
+  width: 230px;
   margin: 20px 0;
   padding: 0;
 
@@ -41,6 +42,7 @@
 }
 
 .site-about__advice {
+  width: 230px;
   margin: 20px 0;
   padding: 0;
 
@@ -51,4 +53,85 @@
 
 .site-about__button {
   display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .site-about {
+    padding: 236px 0 60px 0;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background: top 285px right 8px / 376px 548px no-repeat url('../img/about-tablet@1x.png'),
+      top 235px left 40px / 90% 213px no-repeat url("../img/about-back-tablet@1x.png"),
+      $dark-blue-grey;
+    }
+
+  .site-about__container {
+    padding: 0 350px 0 35px;
+  }
+
+  .site-about__title {
+    margin: 35px 0;
+
+    font: $text-style-45-700;
+  }
+
+  .site-about__slogan {
+    width: auto;
+    margin: 20px 0;
+
+    font: $text-style-28-300;
+    line-height: 1.18;
+  }
+
+  .site-about__advice {
+    width: auto;
+    margin: 35px 0;
+    padding: 0;
+
+    font: $text-style-21-700;
+    line-height: 1.19;
+  }
+
+  .site-about__button {
+    position: relative;
+    display: block;
+    margin: 55px 30px 30px 0;
+    padding: 28px 50px 28px 34px;
+
+    font: $text-style-24-700;
+    line-height: 1;
+    color: $dark-slate-blue;
+
+    border-radius: 20px;
+    background-color: $light-gold;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      right: 35px;
+      top: 50%;
+
+      border-left: 10px solid $dark-slate-blue;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      background-color: $mango-two;
+    }
+
+    &:active {
+      color: rgba($dark-slate-blue, 0.3);
+
+      background-color: $mango-two;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
 }
