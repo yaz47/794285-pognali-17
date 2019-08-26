@@ -8,22 +8,26 @@ block pixel-glass
     html {
       background-repeat: no-repeat;
       background-position: 50% 0;
-      background-image: url("img/pixel-glass/pognali-index-mobile-modals.jpg");
+      background-image: url("img/pixel-glass/pognali-index-mobile.jpg");
     }
 
     /* Tablet */
     @media (min-width: 768px) {
       html {
-        background-image: url("img/pixel-glass/pognali-index-tablet-modals.jpg");
+        background-image: url("img/pixel-glass/pognali-index-tablet.jpg");
       }
     }
 
     /* Desktop */
     @media (min-width: 1440px) {
       html {
-        background-image: url("img/pixel-glass/pognali-index-desktop-modals.jpg");
+        background-image: url("img/pixel-glass/pognali-index-desktop.jpg");
       }
     }
 
 block header
   +site-header()(isMainPage=true)
+
+block content
+  main
+    include ../blocks/site-description/site-description
