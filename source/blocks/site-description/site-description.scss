@@ -5,13 +5,14 @@
   font: $text-style-16-300;
   color: $white;
 
-  background: top 225px left 60% no-repeat url('../img/traveller-illustration-mobile@1x.png'),
-    top 60px center / 100% 418px no-repeat url('../img/globe-back-mobile@1x.jpg'),
+  background: top 225px left 60% / 192px 255px no-repeat url('../img/traveller-illustration-mobile@1x.png'),
+    linear-gradient(to bottom, transparent 480px, $dark 480px 100%),
+    top 0 center / 100% 569px no-repeat url('../img/globe-back-mobile@1x.jpg'),
     $dark;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background: top 225px left 60% / 192px 255px no-repeat url('../img/traveller-illustration-mobile@2x.png'),
-      top 60px center / 100% 418px no-repeat url('../img/globe-back-mobile@2x.jpg'),
+      top 0 center / 100% 569px no-repeat url('../img/globe-back-mobile@2x.jpg'),
       $dark;
   }
 }
@@ -211,12 +212,12 @@
 
     background: top 405px left 71% / 372px 451px no-repeat url('../img/traveller-illustration-tablet@1x.png'),
       bottom 0 center / 1479px 612px no-repeat url('../img/globe-back-tablet@1x.jpg'),
-      $dark;
+      $dark-blue;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: top 405px left 71% / 372px 451px no-repeat url('../img/traveller-illustration-tablet@2x.png'),
         bottom 0 center / 1479px 612px no-repeat url('../img/globe-back-tablet@2x.jpg'),
-        $dark;
+        $dark-blue;
     }
   }
 
@@ -324,5 +325,117 @@
 
   .site-description__item--three .site-description__item-text {
     padding-right: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-description {
+    padding: 90px 0 123px 0;
+
+    background: top 110px left 60% / 431px 640px no-repeat url('../img/traveller-illustration-desktop@1x.png'),
+      bottom 0 left -180px / 1800px 750px no-repeat url('../img/globe-back-desktop@1x.jpg'),
+      $dark;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: top 405px left 71% / 431px 640px no-repeat url('../img/traveller-illustration-desktop@2x.png'),
+      bottom 0 left -180px / 1800px 750px no-repeat url('../img/globe-back-desktop@2x.jpg'),
+        $dark;
+    }
+  }
+
+  .site-description__container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .site-description__title {
+    width: 1000px;
+    margin: 115px 0 105px;
+    padding: 0 500px 0 68px;
+
+    text-align: left;
+  }
+
+  .site-description__blockquote {
+    width: 320px;
+    margin: 0;
+    padding: 0 20px 0 35px;
+  }
+
+  .site-description__text {
+    margin: 127px 0 18px 0;
+  }
+
+  .site-description__footer {
+    margin: 45px 0;
+  }
+
+  .site-description__list {
+    display: flex;
+    width: calc(100% + 100px);
+    flex-flow: row nowrap;
+    margin: 0;
+  }
+
+  .site-description__item {
+    display: flex;
+    width: calc(25% + 20px);
+    min-height: 107px;
+    margin: 0;
+    padding: 10px 50px 19px 33px;
+
+    font: $text-style-24-700;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0;
+
+    &--one {
+      width: calc(25% + 15px);
+      margin-left: 0;
+    }
+
+    &--two {
+      width: calc(25% + 40px);
+      margin-left: -15px;
+    }
+
+    &--three {
+      width: calc(25% + 40px);
+      margin-left: -15px;
+    }
+
+    &--four {
+      width: calc(25%);
+      margin-left: -15px;
+      padding-right: 30px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+    }
+  }
+
+  .site-description__item-text {
+    margin: 17px auto 13px 0;
+    padding: 0 20px 0 0;
+    line-height: 1;
+  }
+
+  .site-description__item-number {
+    margin-top: 15px;
+    font: $text-style-24-700;
+  }
+
+  .site-description__item--four .site-description__item-text {
+    margin-bottom: 5px;
+  }
+
+  .site-description__item--one .site-description__item-text {
+    padding-right: 20px;
+  }
+
+  .site-description__item--three .site-description__item-text {
+    padding-right: 20px;
   }
 }
