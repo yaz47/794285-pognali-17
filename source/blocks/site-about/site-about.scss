@@ -1,0 +1,54 @@
+.site-about {
+  padding: 280px 0 60px 0;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $white;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: top 280px center / 292px 352px no-repeat url('../img/about-mobile@1x.png'),
+    top 280px left -25px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+    $dark-blue-grey;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: top 280px center / 292px 352px no-repeat url('../img/about-mobile@2x.png'),
+    top 280px left -25px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+    $dark-blue-grey;
+  }
+}
+
+.site-about__container {
+  padding: 0 35px 0 25px;
+}
+
+.site-about__title {
+  margin: 28px 0 20px 0;
+  padding: 0;
+
+  font: $text-style-24-700;
+  line-height: 1;
+  color: $mango-dark;
+}
+
+.site-about__slogan {
+  margin: 20px 0;
+  padding: 0;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $white;
+}
+
+.site-about__advice {
+  margin: 20px 0;
+  padding: 0;
+
+  font: $text-style-16-700;
+  line-height: 1.4;
+  color: $white;
+}
+
+.site-about__button {
+  display: none;
+}
