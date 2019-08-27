@@ -1,0 +1,81 @@
+.card-direction {
+  position: relative;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  overflow: hidden;
+}
+
+.card-direction__picture,
+.card-direction__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.card-direction__body {
+  position: relative;
+  display: flex;
+  margin-top: -10px;
+  padding: 23px 20px;
+
+  border-radius: 10px;
+  background-color: $white;
+}
+
+.card-direction__text {
+  width: 75%;
+  margin-right: auto;
+}
+
+.card-direction__title {
+  margin: 2px 0 2px 0;
+  padding: 0;
+
+  font: $text-style-21-700;
+  line-height: 1;
+  color: $dark;
+}
+
+.card-direction__description {
+  margin: 0;
+  padding: 0;
+
+  font: $text-style-16-500;
+  line-height: 1.13;
+  color: rgba($greyish-brown, 0.3);
+}
+
+.card-direction__count {
+  position: relative;
+  width: 25%;
+  padding-left: 15px;
+
+  font: $text-style-16-500;
+  line-height: 1.88;
+  color: rgba($greyish-brown, 0.3);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 11px;
+    height: 11px;
+
+    background: 0 0 / cover no-repeat url("../img/user.svg");
+    opacity: 0.3;
+  }
+}
+
+.card-direction__flag {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  width: 35px;
+  height: 24px;
+}

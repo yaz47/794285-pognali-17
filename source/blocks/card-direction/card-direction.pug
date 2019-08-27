@@ -1,0 +1,18 @@
+mixin card-direction(data)
+  article(class=attributes.parentClass class='card-direction')
+    picture(class='card-direction__picture')
+      source(type='image/webp' media='(min-width: 768px)'
+        srcset=`img/${data.imgDesktop}@1x.webp 1x, img/${data.imgDesktop}@2x.webp 2x`)
+      source(type='image/webp' media='(min-width: 320px)'
+        srcset=`img/${data.imgMobile}@1x.jpg 1x, img/${data.imgMobile}@2x.jpg 2x`)
+      source(media='(min-width: 768px)'
+        srcset=`img/${data.imgDesktop}@1x.jpg 1x, img/${data.imgDesktop}@2x.jpg 2x`)
+      img(class='card-direction__img' src=`img/${data.imgMobile}@1x.jpg`
+        srcset=`img/${data.imgMobile}@2x.jpg 2x` alt=`${data.country}`)
+    div(class='card-direction__body')
+      div(class='card-direction__text')
+        h3(class='card-direction__title') #{data.country}
+        p(class='card-direction__description') #{data.description}
+      div(class='card-direction__count') #{data.count}
+      div(class='card-direction__flag'
+      style={background: `0 0 / cover no-repeat url("img/${data.flagImg}")`})

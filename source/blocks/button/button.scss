@@ -1,0 +1,52 @@
+.button {
+  position: relative;
+  display: block;
+  padding: 22px 34px 22px 24px;
+
+  font: $text-style-18-700;
+  line-height: 1;
+  color: $dark-slate-blue;
+
+  border-radius: 10px;
+  background-color: $light-gold;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 22px;
+    top: 50%;
+
+    border-left: 10px solid $dark-slate-blue;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    background-color: $mango-two;
+  }
+
+  &:active {
+    color: rgba($dark-slate-blue, 0.3);
+
+    background-color: $mango-two;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 50px 26px 34px;
+
+    font: $text-style-24-700;
+
+    border-radius: 20px;
+
+    &::after {
+      right: 35px;
+    }
+  }
+}
