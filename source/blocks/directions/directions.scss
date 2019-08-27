@@ -52,3 +52,37 @@
 .directions__button {
   order: 1;
 }
+
+@media (min-width: $tablet-width) {
+  .directions {
+    margin-top: -70px;
+    padding: 80px 0 70px 0;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .directions__title {
+    margin: 55px 0 45px 0;
+    padding: 0 35px;
+
+    font: $text-style-45-700;
+  }
+
+  .directions__text {
+    width: 400px;
+    margin: 10px 0;
+    padding: 0 25px 0 35px;
+
+    font: $text-style-28-300;
+    line-height: 1.18;
+  }
+
+  .directions__list {
+    margin: 95px 35px 35px 35px;
+  }
+
+  .directions__button {
+    margin: 5px 35px 10px 35px;
+  }
+}
