@@ -141,3 +141,18 @@
     height: 47px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .card-direction__picture {
+    width: 33%;
+  }
+
+  .card-direction__body {
+    width: 67%;
+    padding: 20px 30px 15px 30px;
+  }
+
+  .card-direction__flag {
+    top: 25px;
+  }
+}
