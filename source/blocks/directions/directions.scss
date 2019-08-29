@@ -116,6 +116,8 @@
 
   .directions__container {
     display: block;
+
+    overflow: auto;
   }
 
   .directions__title {
