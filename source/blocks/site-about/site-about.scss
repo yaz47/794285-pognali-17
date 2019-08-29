@@ -9,12 +9,12 @@
 
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  background: top 280px center / 292px 352px no-repeat url('../img/about-mobile@1x.png'),
+  background: top 280px center / 292px 352px no-repeat url("../img/about-mobile@1x.png"),
     top 280px left -25px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
     $dark-blue-grey;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: top 280px center / 292px 352px no-repeat url('../img/about-mobile@2x.png'),
+    background: top 280px center / 292px 352px no-repeat url("../img/about-mobile@2x.png"),
       top 280px left -25px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
       $dark-blue-grey;
   }
@@ -63,10 +63,10 @@
 
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    background: top 285px right 8px / 376px 548px no-repeat url('../img/about-tablet@1x.png'),
+    background: top 285px right 8px / 376px 548px no-repeat url("../img/about-tablet@1x.png"),
       top 235px left 40px / 90% 213px no-repeat url("../img/about-back-tablet@1x.png"),
       $dark-blue-grey;
-    }
+  }
 
   .site-about__container {
     padding: 0 350px 0 35px;
@@ -105,16 +105,16 @@
   .site-about {
     padding: 70px 0 60px 0;
 
-    background: top 85px right calc(50% - 345px) / 630px 665px no-repeat url('../img/about-desktop@1x.png'),
+    background: top 85px right calc(50% - 345px) / 630px 665px no-repeat url("../img/about-desktop@1x.png"),
       top 71px left calc(50% - 560px) / 213px 213px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
       $dark-blue-grey;
-    }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: top 85px right 60px / 630px 665px no-repeat url('../img/about-desktop@2x.png'),
+      background: top 85px right 60px / 630px 665px no-repeat url("../img/about-desktop@2x.png"),
         top 71px left 60px / 213px 213px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
         $dark-blue-grey;
     }
+  }
 
   .site-about__container {
     padding: 0 630px 0 70px;

@@ -204,7 +204,7 @@
   margin: 10px 0;
   padding: 0 30px;
 
-  font: $text-style-16-700;
+  font: $text-style-16-400;
   line-height: 1.13;
   color: $greyish-brown;
   text-align: center;
@@ -279,4 +279,52 @@
 
 .card-companion__transport-item:hover .card-companion__transport-tooltip {
   display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .card-companion__lvl {
+    top: 20px;
+    left: 20px;
+  }
+
+  .card-companion__img-link {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .card-companion__body {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .card-companion__title-link {
+    display: block;
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .card-companion__title {
+    margin: 20px 0 10px 0;
+    padding: 0;
+
+    font: $text-style-24-700;
+
+    &::before {
+      top: 10px;
+      left: -20px;
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  .card-companion__tags {
+    margin: 10px 0 20px 0;
+    padding: 0 30px;
+
+    font: $text-style-20-400;
+  }
+
+  .card-companion__transport-list {
+    margin: 15px auto 20px auto;
+  }
 }

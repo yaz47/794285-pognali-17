@@ -10,14 +10,16 @@
 
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  background: top 86px right 25px / 143px 143px no-repeat url('../img/smolov-back-desktop@1x.png'),
+  background: top 86px right 25px / 143px 143px no-repeat url("../img/smolov-back-desktop@1x.png"),
     top 86px left -20px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
-    top 355px left -10px / 71px 71px no-repeat url('../img/rogovaya-back-mobile@1x.png'),
-  $dark-blue-grey;
+    top 355px left -10px / 71px 71px no-repeat url("../img/rogovaya-back-mobile@1x.png"),
+    $dark-blue-grey;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: top 280px center / 292px 352px no-repeat url('../img/about-mobile@2x.png'),
-      top 280px left -25px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background: top 86px right 25px / 143px 143px no-repeat url("../img/smolov-back-desktop@2x.png"),
+      top 86px left -20px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+      top 355px left -10px / 71px 71px no-repeat url("../img/rogovaya-back-mobile@2x.png"),
       $dark-blue-grey;
   }
 }
@@ -67,4 +69,72 @@
 
 .companions__button {
   order: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .companions {
+    margin-top: -80px;
+    padding: 170px 0 60px 0;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background: top 160px right 75px / 285px 285px no-repeat url("../img/rogovaya-back-desktop@1x.png"),
+      top 160px left 40px / 213px 213px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+      top 505px left 40px / 143px 143px no-repeat url("../img/smolov-back-desktop@1x.png"),
+      $dark-blue-grey;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: top 160px right 75px / 285px 285px no-repeat url("../img/rogovaya-back-desktop@2x.png"),
+        top 160px left 40px / 213px 213px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+        top 505px left 40px / 143px 143px no-repeat url("../img/smolov-back-desktop@2x.png"),
+        $dark-blue-grey;
+    }
+  }
+
+  .companions__title {
+    margin: 42px 0 45px 0;
+    padding: 0 35px;
+
+    font: $text-style-45-700;
+  }
+
+  .companions__text {
+    width: 470px;
+    margin: 10px 0;
+    padding: 0 10px 0 35px;
+
+    font: $text-style-28-300;
+    line-height: 1.18;
+  }
+
+  .companions__slogan {
+    width: 400px;
+    margin: 30px 0;
+    padding: 0 20px 0 35px;
+
+    font: $text-style-21-700;
+    line-height: 1.19;
+  }
+
+  .companions__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 30px 0 50px 0;
+    padding: 0 35px;
+  }
+
+  .companions__item {
+    width: 46%;
+    margin-right: 48px;
+    margin-bottom: 0;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .companions__button {
+    margin: 30px 35px;
+  }
 }
