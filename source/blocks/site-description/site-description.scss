@@ -348,12 +348,12 @@
     padding: 90px 0 123px 0;
 
     background: top 110px left calc(50% + 100px) / 431px 640px no-repeat url('../img/traveller-illustration-desktop@1x.png'),
-      bottom 0 left -180px / 1800px 750px no-repeat url('../img/globe-back-desktop@1x.jpg'),
+      bottom 0 left 50% / 1800px 750px no-repeat url('../img/globe-back-desktop@1x.jpg'),
       $dark;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: top 110px left calc(50% + 100px) / 431px 640px no-repeat url('../img/traveller-illustration-desktop@2x.png'),
-      bottom 0 left -180px / 1800px 750px no-repeat url('../img/globe-back-desktop@2x.jpg'),
+      bottom 0 left 50% / 1800px 750px no-repeat url('../img/globe-back-desktop@2x.jpg'),
         $dark;
     }
   }

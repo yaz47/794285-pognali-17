@@ -110,8 +110,8 @@
       $dark-blue-grey;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: top 85px right 60px / 630px 665px no-repeat url("../img/about-desktop@2x.png"),
-        top 71px left 60px / 213px 213px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+      background: top 85px right calc(50% - 345px) / 630px 665px no-repeat url("../img/about-desktop@2x.png"),
+        top 71px left calc(50% - 560px) / 213px 213px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
         $dark-blue-grey;
     }
   }

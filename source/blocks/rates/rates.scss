@@ -212,3 +212,47 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .rates {
+    margin-top: -60px;
+    padding: 140px 0 147px 0;
+
+    background: top 290px right calc(50% - 250px) / 444px 300px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDQ0IDMwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQ0NCIgaGVpZ2h0PSIzMDAiIHJ4PSIyMCIgZmlsbD0iI0UyRTVGMiIvPgo8L3N2Zz4K"),
+      $pale-grey-middle;
+
+    &::before {
+      top: 345px;
+      right: calc(50% - 585px);
+      width: 198px;
+      height: 198px;
+
+      background: 0 0 / 198px 198px no-repeat url("../img/rates@1x.png");
+
+      @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+        background: 0 0 / 198px 198px no-repeat url("../img/rates@2x.png");
+      }
+    }
+  }
+
+  .rates__title {
+    margin: 20px 0 20px 0;
+    padding: 0 25px;
+
+    font: $text-style-45-700;
+    text-align: center;
+  }
+
+  .rates__term-list {
+    width: 1035px;
+    margin: 130px 0 10px 0;
+    padding: 0 60px 0 160px;
+  }
+
+  .rates__business-link {
+    width: 400px;
+    margin: 60px 0 40px 70px;
+    padding: 0 30px 0 90px;
+  }
+}
