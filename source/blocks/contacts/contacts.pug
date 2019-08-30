@@ -3,7 +3,7 @@ section(class='contacts')
     h2(class='contacts__title') Заинтересовались?
     p(class='contacts__text')
       | Зарегистрируйтесь, это быстро и бесплатно!
-      | Уже зарегистрированы? Тогда скорее
+      | Уже&nbsp;зарегистрированы? Тогда скорее
       |
       a(class='contacts__text-link' href='auth.html') авторизуйтесь
       | .
@@ -19,12 +19,12 @@ section(class='contacts')
       li(class='contacts__item')
         a(class='contacts__link' href='tel:+78005558628' aria-label='Телефон для связи')
           div(class='contacts__badge')
-            svg(class='contacts__icon' width='18' height='18')
+            svg(class='contacts__icon contacts__icon--phone')
               use(xlink:href='#contacts-phone')
           div(class='contacts__tag') 8 800 555-86-28
       li(class='contacts__item')
         a(class='contacts__link' href='mailto:mail@htmlacademy.ru?subject=Info' aria-label='Почта для связи')
           div(class='contacts__badge')
-            svg(class='contacts__icon' width='18' height='13')
+            svg(class='contacts__icon contacts__icon--mail')
               use(xlink:href='#contacts-mail')
           div(class='contacts__tag') mail@htmlacademy.ru
