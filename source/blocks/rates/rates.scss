@@ -1,0 +1,118 @@
+.rates {
+  z-index: 7;
+  position: relative;
+  margin-top: -30px;
+  padding: 30px 0;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $greyish-brown;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: $pale-grey-middle;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    width: 99px;
+    height: 99px;
+
+    background: 0 0 / 99px 99px no-repeat url("../img/rates@1x.png");
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: 0 0 / 99px 99px no-repeat url("../img/rates@2x.png");
+    }
+  }
+}
+
+.rates__title {
+  margin: 50px 0 30px 0;
+  padding: 0 125px 0 25px;
+
+  font: $text-style-24-700;
+  line-height: 1;
+  color: $mango-dark;
+}
+
+.rates__term-list {
+  margin: 45px 0 10px 0;
+  padding: 0 45px 0 25px;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $greyish-brown;
+}
+
+.rates__term-row {
+  position: relative;
+  padding: 10px 0;
+
+  border-top: 1px solid rgba($black, 0.05);
+  border-bottom: 1px solid rgba($black, 0.05);
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    right: -44px;
+    width: 34px;
+    height: 34px;
+    padding: 10px 0;
+
+    font: $text-style-16-400;
+    line-height: 0.88;
+    color: $white;
+    text-align: center;
+
+    border-radius: 50%;
+    background-color: black;
+  }
+
+  &--one::after {
+    content: "1";
+
+    background-color: $mango;
+  }
+
+  &--two::after {
+    content: "2";
+
+    background-color: $mango-two;
+  }
+
+  &--three::after {
+    content: "3";
+
+    background-color: $light-gold;
+  }
+}
+
+.rates__term,
+.rates__description {
+  margin: 0;
+  padding: 0;
+}
+
+.rates__business-link {
+  display: block;
+  margin: 30px 0 10px 0;
+  padding: 0 25px;
+
+  font: $text-style-16-700;
+  line-height: 1;
+  color: $dark-blue-grey;
+
+  &:hover {
+    color: rgba($dark-blue-grey, 0.7);
+  }
+
+  &:active {
+    color: rgba($dark-blue-grey, 0.3);
+  }
+}
