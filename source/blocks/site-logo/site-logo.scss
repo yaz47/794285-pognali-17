@@ -1,23 +1,33 @@
 .site-logo {
   display: block;
+  width: 96px;
   margin: 0;
   padding: 0;
 
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 164px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 198px;
+  }
 }
 
 .site-logo__picture,
 .site-logo__img {
   display: block;
-  width: 100px;
+  width: 96px;
+  height: auto;
   margin: 0;
   padding: 0;
 
   @media (min-width: $tablet-width) {
-    width: 166px;
+    width: 164px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 200px;
+    width: 198px;
   }
 }

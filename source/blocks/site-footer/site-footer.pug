@@ -1,2 +1,25 @@
 mixin site-footer()
-  .site-footer Это футер
+  footer(class='site-footer')
+    div(class='site-footer__container container')
+
+      include ../site-logo/site-logo
+      if (attributes.isMainPage)
+        +site-logo()(parentClass='site-footer__site-logo' linkHref='index.html')
+      else
+        +site-logo()(parentClass='site-footer__site-logo')
+
+      ul(class='site-footer__social-list')
+        li(class='site-footer__social-item')
+          a(class='site-footer__social-link' href='facebook.html' aria-label='Наш фейсбук')
+            svg(class='site-footer__social-icon site-footer__social-icon--facebook')
+              use(xlink:href='#facebook')
+        li(class='site-footer__social-item')
+          a(class='site-footer__social-link' href='vk.html' aria-label='Наш вк')
+            svg(class='site-footer__social-icon site-footer__social-icon--vk')
+              use(xlink:href='#vk')
+        li(class='site-footer__social-item')
+          a(class='site-footer__social-link' href='instagram.html' aria-label='Наш инстаграм')
+            svg(class='site-footer__social-icon site-footer__social-icon--instagram')
+              use(xlink:href='#instagram')
+
+      a(class='site-footer__developer' href='https://htmlacademy.ru/intensive/adaptive') Разработано
