@@ -127,3 +127,38 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .address {
+    padding: 115px 0 50px 0;
+  }
+
+  .address__container {
+    display: flex;
+    align-items: center;
+    padding: 0 65px 0 220px;
+  }
+
+  .address__address-wrapper {
+    width: 580px;
+    margin: 10px auto 10px 0;
+  }
+
+  .address__badge {
+    width: 90px;
+    height: 90px;
+
+    background: center / 28px 43px no-repeat url("../img/contacts-location.svg"),
+      $dark-blue-grey-three;
+  }
+
+  .address__tag {
+    width: auto;
+    margin: 0 5px 0 35px;
+  }
+
+  .address__button {
+    width: 325px;
+    margin: 10px;
+  }
+}
