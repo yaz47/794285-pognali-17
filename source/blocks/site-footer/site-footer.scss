@@ -161,3 +161,14 @@
     border-top: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .site-footer {
+    margin-top: -70px;
+    padding: 45px 0 30px 0;
+  }
+
+  .site-footer__social-list {
+    margin: 0 303px 0 263px;
+  }
+}
