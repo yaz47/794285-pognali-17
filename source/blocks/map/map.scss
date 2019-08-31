@@ -1,0 +1,39 @@
+.map {
+  z-index: 4;
+  position: relative;
+  width: 100%;
+  height: 40px + 272px + 40px;
+  margin-top: -40px;
+}
+
+.map__picture,
+.map__img,
+.map__iframe {
+  z-index: 3;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.map__iframe {
+  height: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    height: 70px + 461px + 70px;
+    margin-top: -60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    height: 70px + 396px + 70px;
+    margin-top: -60px;
+  }
+}
