@@ -349,3 +349,142 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .site-header {
+    min-height: 90px;
+    padding-top: 35px;
+
+    background-color: transparent;
+  }
+
+  .site-header__container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .site-header__site-logo {
+    order: 1;
+    margin: 15px 0;
+  }
+
+  .site-header__toggle {
+    display: none;
+  }
+
+  .site-header__navigation {
+    position: relative;
+    order: 2;
+    width: 675px;
+    margin: 15px auto 15px 145px;
+    padding: 0;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 24px;
+      left: -105px;
+      width: 60px;
+      height: 2px;
+
+      background-color: $white;
+    }
+  }
+
+  .site-header__navigation-list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .site-header__navigation-item {
+    padding: 10px 36px 10px 0;
+  }
+
+  .site-header__navigation-link {
+    font: $text-style-20-500;
+    line-height: 1.5;
+    color: $white;
+  }
+
+  .site-header__auth {
+    order: 3;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    width: 290px;
+    margin: 15px 0;
+  }
+
+  .site-header__auth-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .site-header__auth-item-link {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      top: 50%;
+      left: 50%;
+
+      background-repeat: no-repeat;
+      background-position: center;
+
+      transform: translate(-50%, -50%);
+    }
+
+    &--phone {
+      background-color: $mango-dark;
+    }
+
+    &--mail {
+      background-color: $mango-two;
+    }
+
+    &--phone::before {
+      background-image: url("../img/topmenu-phone.svg");
+      background-size: 18px 18px;
+    }
+
+    &--mail::before {
+      background-image: url("../img/topmenu-mail.svg");
+      background-size: 18px 14px;
+    }
+
+    &--phone:hover,
+    &--phone:active {
+      background-color: $dusty-orange;
+    }
+
+    &--mail:hover,
+    &--mail:active {
+      background-color: $mango-dark;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+
+  .site-header__contacts-list {
+    display: none;
+  }
+
+  .site-header__social-list {
+    display: none;
+  }
+}
