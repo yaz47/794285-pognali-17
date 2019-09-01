@@ -41,6 +41,7 @@
 
 .site-header__navigation-link {
   display: block;
+  padding-right: 5px;
 
   font: $text-style-30-500;
   line-height: 1.2;
@@ -486,5 +487,69 @@
 
   .site-header__social-list {
     display: none;
+  }
+}
+
+.site-header--closed {
+  background-color: transparent;
+
+  overflow: hidden;
+
+  & .site-header__navigation,
+  & .site-header__auth,
+  & .site-header__contacts-list,
+  & .site-header__social-list {
+    display: none;
+  }
+
+  & .toggle-inner,
+  & .toggle-inner::before,
+  & .toggle-inner::after {
+    background-color: $white;
+  }
+
+  & .toggle-inner::before {
+    background-color: transparent;
+  }
+
+  @media (min-width: $tablet-width) {
+    & .site-header__auth {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    & .site-header__auth {
+      display: flex;
+    }
+
+    & .site-header__navigation {
+      display: block;
+    }
+  }
+}
+
+.site-header--fixed {
+  position: fixed;
+}
+
+.site-header--closed.site-header--fixed {
+  background-color: $white;
+
+  & .toggle-inner,
+  & .toggle-inner::after {
+    background-color: $pinkish-grey-three;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 8px;
+
+    & .site-header__navigation-link {
+      color: $dark-blue-grey;
+    }
+
+    & .site-header__navigation-link:hover {
+      color: $light-gold;
+    }
   }
 }

@@ -122,7 +122,10 @@ function createBuildJs() {
 }
 
 function createSvgSprite() {
-  return src('source/img/svg-sprite/*.svg')
+  return src([
+      'source/img/svg-sprite/*.svg',
+      '!source/img/svg-sprite/sprite.svg'
+    ])
     .pipe(svgstore({
       inlineSvg: true
     }))
