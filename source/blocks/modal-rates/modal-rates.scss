@@ -19,7 +19,7 @@
 }
 
 .modal-rates__title {
-  margin: 35px 27px;
+  margin: 40px 27px;
 
   font: $text-style-24-700;
   line-height: 1;
@@ -52,7 +52,6 @@
   padding: 0;
 }
 
-
 .modal-rates__close {
   display: block;
   margin: 25px 0 0 0;
@@ -77,5 +76,52 @@
     color: rgba($dark-slate-blue, 0.3);
 
     background-color: $pale-grey-middle;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal-rates {
+    left: 40px;
+    width: calc(100% - 80px);
+
+    border-radius: 30px;
+  }
+
+  .modal-rates__title {
+    margin: 40px 75px;
+
+    font: $text-style-45-700;
+  }
+
+  .modal-rates__term-list {
+    margin: 0 75px;
+    padding: 0;
+
+    font: $text-style-22-300;
+    line-height: 1.27;
+  }
+
+  .modal-rates__term-row {
+    display: flex;
+    padding: 15px;
+  }
+
+  .modal-rates__term,
+  .modal-rates__description {
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal-rates__term {
+    margin-right: auto;
+  }
+
+  .modal-rates__close {
+    margin: 50px 0 0 0;
+    padding: 40px 90px;
+
+    font: $text-style-24-700;
+    line-height: 1;
+    text-transform: none;
   }
 }
