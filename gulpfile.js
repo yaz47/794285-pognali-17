@@ -33,19 +33,23 @@ const htmlmin = require('gulp-htmlmin');
 
 const browserSync = require('browser-sync').create();
 
-function cleanImages() {
-  return del([
-      'source/img/**',
-      '!source/img',
-      '!source/img/exclude-**',
-      '!source/img/exclude-*/**/*'
-    ]);
+function optimizeImages() {
+  return src([
+    'source/img/content/*.{png,jpg,svg}',
+    'source/img/background/*.{png,jpg,svg}',
+    'source/img/pixel-glass/*.{png,jpg,svg}',
+    '!source/img/exclude-*/**'
+    ])
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(dest('build/img'));
 }
 
-function optimizeImages() {
-  return src('source/img/exclude-original/**/*.{png,jpg,svg}', {
-      base: 'source/img/exclude-original'
-    })
+function createSourceImages() {
+  return src('source/img/exclude-original/*.{png,jpg,svg}')
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
@@ -55,11 +59,9 @@ function optimizeImages() {
 }
 
 function createWebp() {
-  return src('source/img/exclude-original/**/*.{png,jpg}', {
-      base: 'source/img/exclude-original'
-    })
+  return src('source/img/content/**/*.{png,jpg}')
     .pipe(webp({quality: 90}))
-    .pipe(dest('source/img'));
+    .pipe(dest('build/img'));
 }
 
 function cleanBuild() {
@@ -69,8 +71,6 @@ function cleanBuild() {
 function copyBuild() {
   return src([
       'source/fonts/**/*.{woff,woff2}',
-      'source/img/**',
-      '!source/img/exclude-*/**',
       'source/*.ico'
     ], {
       base: 'source'
@@ -121,13 +121,13 @@ function createBuildJs() {
     .pipe(dest('build/js'));
 }
 
-function createSprite() {
-  return src('source/img/exclude-sprite/*.svg')
+function createSvgSprite() {
+  return src('source/img/svg-sprite/*.svg')
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(dest('source/img'));
+    .pipe(dest('source/img/svg-sprite'));
 }
 
 function createBuildHtml() {
@@ -174,7 +174,7 @@ function initServer() {
   watch('source/js/**/*.js',
     series(exports.js, refreshServer));
   watch('source/img/exclude-sprite/**/*.svg',
-    series(createSprite, createBuildHtml, createSourceHtml, refreshServer));
+    series(createSvgSprite, createBuildHtml, createSourceHtml, refreshServer));
   watch([
     'source/pug/**/*.pug',
     'source/views/**/*.pug',
@@ -182,11 +182,13 @@ function initServer() {
     ], series(createBuildHtml, createSourceHtml, refreshServer));
 }
 
-exports.images = series(cleanImages, optimizeImages, createWebp);
+exports.createSourceImages = createSourceImages;
+exports.images = series(optimizeImages, createWebp);
 exports.js = createBuildJs;
 exports.build = series(
-  exports.images, cleanBuild, copyBuild,
-  parallel(series(createBuildCss, createSourceCss), createSprite, exports.js),
+  cleanBuild, copyBuild, exports.images,
+  parallel(series(createBuildCss, createSourceCss), createSvgSprite, exports.js),
   createBuildHtml, createSourceHtml
 );
 exports.start = series(exports.build, initServer);
+exports.initServer = initServer;
