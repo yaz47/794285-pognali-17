@@ -4,9 +4,9 @@ mixin site-header()
 
       include ../site-logo/site-logo
       if (attributes.isMainPage)
-        +site-logo()(parentClass='site-header__site-logo' linkHref='index.html')
-      else
         +site-logo()(parentClass='site-header__site-logo')
+      else
+        +site-logo()(parentClass='site-header__site-logo' linkHref='index.html')
 
       include ../toggle/toggle
       +toggle()(parentClass='site-header__toggle')

@@ -4,9 +4,9 @@ mixin site-footer()
 
       include ../site-logo/site-logo
       if (attributes.isMainPage)
-        +site-logo()(parentClass='site-footer__site-logo' linkHref='index.html')
-      else
         +site-logo()(parentClass='site-footer__site-logo')
+      else
+        +site-logo()(parentClass='site-footer__site-logo' linkHref='index.html')
 
       ul(class='site-footer__social-list')
         li(class='site-footer__social-item')
