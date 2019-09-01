@@ -1,0 +1,51 @@
+mixin card-companion(data)
+  article(class=attributes.parentClass class='card-companion')
+    div(class='card-companion__lvl')
+      svg(class='card-companion__lvl-border'
+        viewBox='0 0 110 110' xmlns='http://www.w3.org/2000/svg'
+        width='60' height='60' style='transform:rotate(-90deg);')
+        circle(cx='55' cy='55' r='50' fill='none' stroke='#ff8d30'
+          stroke-width='5' stroke-dasharray=`${3.15 * data.lvl} 315`)
+      div(class='card-companion__lvl-amount') #{data.lvl}
+      div(class='card-companion__lvl-text') level
+    a(class='card-companion__img-link' href=`${data.link}` aria-label=`${data.name}`)
+      picture(class='card-companion__picture')
+        source(type='image/webp'
+          srcset=`img/${data.img}@1x.webp 1x, img/${data.img}@2x.webp 2x`)
+        img(class='card-companion__img' src=`img/${data.img}@1x.jpg`
+          srcset=`img/${data.img}@2x.jpg 2x` alt=`${data.name}`)
+    div(class='card-companion__body')
+      div(class='card-companion__flag-wrapper')
+        ul(class='card-companion__flag-list')
+          each val in data.flagList
+            li(class='card-companion__flag-item'
+              style={background: `0 0 / cover no-repeat url("img/${val.flagImg}")`})
+              div(class='card-companion__flag-tooltip') #{val.flagTooltip}
+      a(class='card-companion__title-link' href=`${data.link}`)
+        h3(class=`card-companion__title card-companion__title--${data.isOnline}`) #{data.name}
+      p(class='card-companion__tags') #{data.tags}
+      ul(class='card-companion__transport-list')
+        li(class='card-companion__transport-item')
+          svg(class=`card-companion__transport-icon card-companion__transport-icon--${data.isPlaneAvailable}`
+            role='img' width='19' height='21')
+            title Авиаперелет
+            use(xlink:href='#plane')
+          div(class='card-companion__transport-tooltip') Авиаперелет
+        li(class='card-companion__transport-item')
+          svg(class=`card-companion__transport-icon card-companion__transport-icon--${data.isBusAvailable}`
+            role='img' width='17' height='21')
+            title Автотранспорт
+            use(xlink:href='#bus')
+          div(class='card-companion__transport-tooltip') Автотранспорт
+        li(class='card-companion__transport-item')
+          svg(class=`card-companion__transport-icon card-companion__transport-icon--${data.isBikeAvailable}`
+            role='img' width='24' height='21')
+            title Велосипед
+            use(xlink:href='#bike')
+          div(class='card-companion__transport-tooltip') Велосипед
+        li(class='card-companion__transport-item')
+          svg(class=`card-companion__transport-icon card-companion__transport-icon--${data.isRunAvailable}`
+            role='img' width='20' height='21')
+            title Пешком
+            use(xlink:href='#run')
+          div(class='card-companion__transport-tooltip') Пешком

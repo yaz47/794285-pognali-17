@@ -1,0 +1,46 @@
+extends ../pug/layout
+
+block title
+  title Погнали - сервис для путешественников
+
+block pixel-glass
+  style.
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-image: url("img/pognali-index-mobile-modals.jpg");
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+      html {
+        background-image: url("img/pognali-index-tablet-modals.jpg");
+      }
+    }
+
+    /* Desktop */
+    @media (min-width: 1440px) {
+      html {
+        background-image: url("img/pognali-index-desktop-modals.jpg");
+      }
+    }
+
+block header
+  +site-header()(isMainPage=true)
+
+block content
+  main
+    include ../blocks/site-description/site-description
+    include ../blocks/site-about/site-about
+    include ../blocks/directions/directions
+    include ../blocks/companions/companions
+    include ../blocks/rates/rates
+    include ../blocks/contacts/contacts
+    include ../blocks/address/address
+    include ../blocks/map/map
+
+block footer
+  +site-footer()(isMainPage=true)
+
+block modal
+  include ../blocks/modal-rates/modal-rates

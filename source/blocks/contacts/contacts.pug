@@ -1,0 +1,30 @@
+section(class='contacts')
+  div(class='contacts__container container')
+    h2(class='contacts__title') Заинтересовались?
+    p(class='contacts__text')
+      | Зарегистрируйтесь, это быстро и бесплатно!
+      | Уже&nbsp;зарегистрированы? Тогда скорее
+      |
+      a(class='contacts__text-link' href='auth.html') авторизуйтесь
+      | .
+    form(class='contacts__form' action='https://echo.htmlacademy.ru' method='POST')
+      label(class='visually-hidden' for='email') Ваш емаил
+      div(class='contacts__form-wrapper')
+        input(class='contacts__input-email' type="email"
+        name='email' id='email' placeholder='E-mail' autocomplete='on' required)
+        button(class='contacts__submit' type='submit' aria-label='Зарегистрироваться')
+          span(class='contacts__submit-text') Регистрация
+    p(class='contacts__text') Остались вопросы? Мы с радостью на них ответим!
+    ul(class='contacts__list')
+      li(class='contacts__item')
+        a(class='contacts__link' href='tel:+78005558628' aria-label='Телефон для связи')
+          div(class='contacts__badge')
+            svg(class='contacts__icon contacts__icon--phone')
+              use(xlink:href='#contacts-phone')
+          div(class='contacts__tag') 8 800 555-86-28
+      li(class='contacts__item')
+        a(class='contacts__link' href='mailto:mail@htmlacademy.ru?subject=Info' aria-label='Почта для связи')
+          div(class='contacts__badge')
+            svg(class='contacts__icon contacts__icon--mail')
+              use(xlink:href='#contacts-mail')
+          div(class='contacts__tag') mail@htmlacademy.ru

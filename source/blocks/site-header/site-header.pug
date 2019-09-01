@@ -1,0 +1,67 @@
+mixin site-header()
+  header(class='site-header')
+    div(class='site-header__container container')
+
+      include ../site-logo/site-logo
+      if (attributes.isMainPage)
+        +site-logo()(parentClass='site-header__site-logo')
+      else
+        +site-logo()(parentClass='site-header__site-logo' linkHref='index.html')
+
+      include ../toggle/toggle
+      +toggle()(parentClass='site-header__toggle')
+
+      nav(class='site-header__navigation')
+        ul(class='site-header__navigation-list')
+          li(class='site-header__navigation-item')
+            a(class='site-header__navigation-link' href='about.html')
+              span(class='site-header__navigation-link-text' data-hover='О сервисе').
+                О сервисе
+          li(class='site-header__navigation-item')
+            a(class='site-header__navigation-link' href='form.html')
+              span(class='site-header__navigation-link-text' data-hover='Направления').
+                Направления
+          li(class='site-header__navigation-item')
+            a(class='site-header__navigation-link' href='catalog.html')
+              span(class='site-header__navigation-link-text' data-hover='Попутчики').
+                Попутчики
+
+      div(class='site-header__auth')
+        ul(class='site-header__auth-list')
+          li(class='site-header__auth-item site-header__auth-item--dark')
+            a(class='site-header__auth-item-link site-header__auth-item-link--phone'
+              href='tel:+78005558628' aria-label='Телефон для связи')
+          li(class='site-header__auth-item site-header__auth-item--light')
+            a(class='site-header__auth-item-link site-header__auth-item-link--mail'
+              href='mailto:mail@htmlacademy.ru?subject=Info' aria-label='Почта для связи')
+        a(class='site-header__auth-button' href='auth.html') Авторизация
+
+      ul(class='site-header__contacts-list')
+        li(class='site-header__contacts-item')
+          a(class='site-header__contacts-link' href='tel:+78005558628' aria-label='Телефон для связи')
+            div(class='site-header__contacts-badge')
+              svg(class='site-header__contacts-icon site-header__contacts-icon--phone')
+                use(xlink:href='#contacts-phone')
+            div(class='site-header__contacts-tag').
+              8 800 555-86-28
+        li(class='site-header__contacts-item')
+          a(class='site-header__contacts-link' href='mailto:mail@htmlacademy.ru?subject=Info' aria-label='Почта для связи')
+            div(class='site-header__contacts-badge')
+              svg(class='site-header__contacts-icon site-header__contacts-icon--mail')
+                use(xlink:href='#contacts-mail')
+            div(class='site-header__contacts-tag').
+              mail@htmlacademy.ru
+
+      ul(class='site-header__social-list')
+        li(class='site-header__social-item')
+          a(class='site-header__social-link' href='facebook.html' aria-label='Наш фейсбук')
+            svg(class='site-header__social-icon site-header__social-icon--facebook')
+              use(xlink:href='#facebook')
+        li(class='site-header__social-item')
+          a(class='site-header__social-link' href='vk.html' aria-label='Наш вк')
+            svg(class='site-header__social-icon site-header__social-icon--vk')
+              use(xlink:href='#vk')
+        li(class='site-header__social-item')
+          a(class='site-header__social-link' href='instagram.html' aria-label='Наш инстаграм')
+            svg(class='site-header__social-icon site-header__social-icon--instagram')
+              use(xlink:href='#instagram')

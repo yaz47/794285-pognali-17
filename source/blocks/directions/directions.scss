@@ -1,0 +1,151 @@
+.directions {
+  z-index: 9;
+  position: relative;
+  margin-top: -60px;
+  padding: 60px 0 28px 0;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $greyish-brown;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: $pale-grey-middle;
+}
+
+.directions__container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.directions__title {
+  margin: 72px 0 10px 0;
+  padding: 0 25px;
+
+  font: $text-style-24-700;
+  line-height: 1;
+  color: $mango-dark;
+}
+
+.directions__text {
+  width: 270px;
+  margin: 10px 0;
+  padding: 0 50px 0 25px;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $greyish-brown;
+}
+
+.directions__list {
+  margin: 50px 0 18px 0;
+  padding: 0;
+
+  list-style: none;
+  order: 1;
+}
+
+.directions__item {
+  margin-bottom: 10px;
+}
+
+.directions__button {
+  order: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .directions {
+    margin-top: -70px;
+    padding: 80px 0 70px 0;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    background: top 148px right 40px / 289px 575px no-repeat url("../img/flags-back@1x.png"),
+      top 474px left 40px / 141px 141px no-repeat url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQxIiBoZWlnaHQ9IjE0MSIgdmlld0JveD0iMCAwIDE0MSAxNDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNDEiIGhlaWdodD0iMTQxIiByeD0iMjAiIGZpbGw9IiNFMkU1RjIiLz4KPC9zdmc+Cg=="),
+      $pale-grey-middle;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: top 148px right 40px / 289px 575px no-repeat url("../img/flags-back@2x.png"),
+        top 474px left 40px / 141px 141px no-repeat url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQxIiBoZWlnaHQ9IjE0MSIgdmlld0JveD0iMCAwIDE0MSAxNDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNDEiIGhlaWdodD0iMTQxIiByeD0iMjAiIGZpbGw9IiNFMkU1RjIiLz4KPC9zdmc+Cg=="),
+        $pale-grey-middle;
+    }
+  }
+
+  .directions__title {
+    margin: 55px 0 45px 0;
+    padding: 0 35px;
+
+    font: $text-style-45-700;
+  }
+
+  .directions__text {
+    width: 400px;
+    margin: 10px 0;
+    padding: 0 25px 0 35px;
+
+    font: $text-style-28-300;
+    line-height: 1.18;
+  }
+
+  .directions__list {
+    margin: 95px 35px 35px 35px;
+  }
+
+  .directions__button {
+    margin: 5px 35px 10px 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .directions {
+    padding: 80px 0 130px 0;
+
+    background: top 158px right calc(50% - 515px) / 289px 575px no-repeat url("../img/flags-back@1x.png"),
+      top 160px left calc(50% - 590px) / 141px 141px no-repeat url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQxIiBoZWlnaHQ9IjE0MSIgdmlld0JveD0iMCAwIDE0MSAxNDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNDEiIGhlaWdodD0iMTQxIiByeD0iMjAiIGZpbGw9IiNFMkU1RjIiLz4KPC9zdmc+Cg=="),
+      $pale-grey-middle;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background: top 158px right calc(50% - 515px) / 289px 575px no-repeat url("../img/flags-back@2x.png"),
+        top 160px left calc(50% - 590px) / 141px 141px no-repeat url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQxIiBoZWlnaHQ9IjE0MSIgdmlld0JveD0iMCAwIDE0MSAxNDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNDEiIGhlaWdodD0iMTQxIiByeD0iMjAiIGZpbGw9IiNFMkU1RjIiLz4KPC9zdmc+Cg=="),
+        $pale-grey-middle;
+    }
+  }
+
+  .directions__container {
+    display: block;
+
+    overflow: auto;
+  }
+
+  .directions__title {
+    display: inline-block;
+    margin: 150px 10px 35px 85px;
+    padding: 0 35px;
+
+    font: $text-style-45-700;
+  }
+
+  .directions__text {
+    display: inline-block;
+    margin: 15px 10px 35px 120px;
+    padding: 0 50px 0 0;
+
+    font: $text-style-28-300;
+    line-height: 1.18;
+  }
+
+  .directions__list {
+    width: 560px;
+    float: left;
+    margin: 150px 50px 10px 70px;
+  }
+
+  .directions__button {
+    display: inline-block;
+    min-width: 275px;
+    margin: 65px 35px 10px 125px;
+  }
+}

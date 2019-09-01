@@ -1,0 +1,36 @@
+.site-logo {
+  display: block;
+  width: 96px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 166px;
+    height: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+    height: 52px;
+  }
+}
+
+.site-logo__picture,
+.site-logo__img {
+  display: block;
+  width: 96px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 166px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+  }
+}

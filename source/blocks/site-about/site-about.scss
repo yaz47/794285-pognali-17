@@ -1,0 +1,140 @@
+.site-about {
+  z-index: 10;
+  position: relative;
+  padding: 280px 0 60px 0;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $white;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: top 280px center / 292px 352px no-repeat url("../img/about-mobile@1x.png"),
+    top 280px left -25px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+    $dark-blue-grey;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: top 280px center / 292px 352px no-repeat url("../img/about-mobile@2x.png"),
+      top 280px left -25px / 132px 132px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+      $dark-blue-grey;
+  }
+}
+
+.site-about__container {
+  padding: 0 20px 0 25px;
+}
+
+.site-about__title {
+  margin: 28px 0 20px 0;
+  padding: 0;
+
+  font: $text-style-24-700;
+  line-height: 1;
+  color: $mango-dark;
+}
+
+.site-about__slogan {
+  width: 230px;
+  margin: 20px 0;
+  padding: 0;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $white;
+}
+
+.site-about__advice {
+  width: 230px;
+  margin: 20px 0;
+  padding: 0;
+
+  font: $text-style-16-700;
+  line-height: 1.4;
+  color: $white;
+}
+
+.site-about__button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .site-about {
+    padding: 236px 0 60px 0;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background: top 285px right 8px / 376px 548px no-repeat url("../img/about-tablet@1x.png"),
+      top 235px left 40px / 90% 213px no-repeat url("../img/about-back-tablet@1x.png"),
+      $dark-blue-grey;
+  }
+
+  .site-about__container {
+    padding: 0 350px 0 35px;
+  }
+
+  .site-about__title {
+    margin: 35px 0;
+
+    font: $text-style-45-700;
+  }
+
+  .site-about__slogan {
+    width: auto;
+    margin: 20px 0;
+
+    font: $text-style-28-300;
+    line-height: 1.18;
+  }
+
+  .site-about__advice {
+    width: auto;
+    margin: 35px 0;
+    padding: 0;
+
+    font: $text-style-21-700;
+    line-height: 1.19;
+  }
+
+  .site-about__button {
+    display: block;
+    margin: 55px 30px 30px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-about {
+    padding: 70px 0 60px 0;
+
+    background: top 85px right calc(50% - 345px) / 630px 665px no-repeat url("../img/about-desktop@1x.png"),
+      top 71px left calc(50% - 560px) / 213px 213px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+      $dark-blue-grey;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: top 85px right calc(50% - 345px) / 630px 665px no-repeat url("../img/about-desktop@2x.png"),
+        top 71px left calc(50% - 560px) / 213px 213px no-repeat url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTMyIDEzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAyMEMwIDguOTU0MyA4Ljk1NDMxIDAgMjAgMEgxMTJDMTIzLjA0NiAwIDEzMiA4Ljk1NDMxIDEzMiAyMFYxMTJDMTMyIDEyMy4wNDYgMTIzLjA0NiAxMzIgMTEyIDEzMkgyMEM4Ljk1NDMgMTMyIDAgMTIzLjA0NiAwIDExMlYyMFoiIGZpbGw9IiMxNDFiM2IiLz48L3N2Zz4K"),
+        $dark-blue-grey;
+    }
+  }
+
+  .site-about__container {
+    padding: 0 630px 0 70px;
+  }
+
+  .site-about__title {
+    margin: 55px 0;
+  }
+
+  .site-about__slogan {
+    margin: 20px 0;
+  }
+
+  .site-about__advice {
+    margin: 40px 0;
+    padding: 0 170px 0 0;
+  }
+
+  .site-about__button {
+    width: 274px;
+    margin: 85px 30px 105px 0;
+  }
+}

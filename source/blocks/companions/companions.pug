@@ -1,0 +1,47 @@
+section(class='companions')
+  h2(class='visually-hidden') Попутчики
+  div(class='companions__container container')
+    include ../card-companion/card-companion
+    ul(class='companions__list')
+      li(class='companions__item')
+        +card-companion({
+          lvl: '99',
+          img: 'firsova-desktop',
+          name: 'Таня Фирсова',
+          tags: '#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи',
+          link: 'firsova.html',
+          isOnline: 'offline',
+          isPlaneAvailable: 'available',
+          isBusAvailable: 'not-available',
+          isBikeAvailable: 'not-available',
+          isRunAvailable: 'not-available',
+          flagList: [
+            {flagImg: 'flag-sri-lanka.svg', flagTooltip: 'Шри-Ланка'},
+            {flagImg: 'flag-thailand.svg', flagTooltip: 'Тайланд'},
+            {flagImg: 'flag-seychelles.svg', flagTooltip: 'Сейшеллы'}
+          ]
+        })(parentClass='companions__card-companion')
+      li(class='companions__item')
+        +card-companion({
+          lvl: '80',
+          img: 'demin-desktop',
+          name: 'Петя Демин',
+          tags: '#бургер #бар #футбол #концерт #крафт',
+          link: 'demin.html',
+          isOnline: 'online',
+          isPlaneAvailable: 'available',
+          isBusAvailable: 'available',
+          isBikeAvailable: 'not-available',
+          isRunAvailable: 'available',
+          flagList: [
+            {flagImg: 'flag-belgium.svg', flagTooltip: 'Бельгия'},
+            {flagImg: 'flag-czech.svg', flagTooltip: 'Чехия'}
+          ]
+        })(parentClass='companions__card-companion')
+    div(class='companions__title') Попутчики
+    p(class='companions__text').
+      Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+      Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+    p(class='companions__slogan').
+      Теперь можно легко найти&nbsp;единомышленников!
+    a(class='companions__button button' href='catalog.html') Показать всех

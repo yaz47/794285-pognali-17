@@ -1,0 +1,38 @@
+section(class='directions')
+  h2(class='visually-hidden') Направления
+  div(class='directions__container container')
+    include ../card-direction/card-direction
+    ul(class='directions__list')
+      li(class='directions__item')
+        +card-direction({
+          country: 'Тайланд',
+          description: 'Джунгли зовут!',
+          count: '18321',
+          imgDesktop: 'thailand-desktop',
+          imgMobile: 'thailand-mobile',
+          flagImg: 'flag-thailand.svg'
+        })(parentClass='directions__card-direction')
+      li(class='directions__item')
+        +card-direction({
+          country: 'Франция',
+          description: 'Трэ бьен, манифик!',
+          count: '12518',
+          imgDesktop: 'france-desktop',
+          imgMobile: 'france-mobile',
+          flagImg: 'flag-france.svg'
+        })(parentClass='directions__card-direction')
+      li(class='directions__item')
+        +card-direction({
+          country: 'Чехия',
+          description: 'Закоулки старой Европы',
+          count: '5326',
+          imgDesktop: 'czech-desktop',
+          imgMobile: 'czech-mobile',
+          flagImg: 'flag-czech.svg'
+        })(parentClass='directions__card-direction')
+    div(class='directions__title') Направления
+    p(class='directions__text').
+      Мы не продаем туры и&nbsp;ничего не рекламируем.
+      Люди сами пишут о странах, куда хотели бы отправиться
+      и чем можно там заняться.
+    a(class='directions__button button' href='form.html') Показать все
