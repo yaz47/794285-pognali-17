@@ -81,6 +81,7 @@
 
 @media (min-width: $tablet-width) {
   .modal-rates {
+    top: 20vh;
     left: 40px;
     width: calc(100% - 80px);
 
@@ -123,5 +124,25 @@
     font: $text-style-24-700;
     line-height: 1;
     text-transform: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal-rates {
+    left: calc(50% - 375px);
+    width: 750px;
+  }
+
+  .modal-rates__title {
+    margin: 40px 45px;
+  }
+
+  .modal-rates__term-list {
+    margin: 0 45px;
+  }
+
+  .modal-rates__close {
+    margin: 50px 0 0 0;
+    padding: 40px 45px;
   }
 }
