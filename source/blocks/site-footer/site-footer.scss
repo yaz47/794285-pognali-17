@@ -98,10 +98,18 @@
   }
 
   &:hover {
-    opacity: 0.6;
+    color: rgba($greyish-brown, 0.6);
   }
 
   &:active {
+    color: rgba($greyish-brown, 0.3);
+  }
+
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
     opacity: 0.3;
   }
 }
