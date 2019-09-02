@@ -1,0 +1,6 @@
+mixin site-title(data)
+  section(class='site-title')
+    div(class='site-title__container container')
+      h1(class='site-title__title') #{data.title}
+      if attributes.hasReturnLink
+        a(class='site-title__return' href='index.html') На главную

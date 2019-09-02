@@ -3,12 +3,16 @@
 @import "fonts";
 @import "variables";
 @import "global";
+
+// element blocks
 @import "../blocks/site-logo/site-logo";
 @import "../blocks/toggle/toggle";
 @import "../blocks/button/button";
 @import "../blocks/card-direction/card-direction";
 @import "../blocks/card-companion/card-companion";
 @import "../blocks/modal/modal";
+
+// structure blocks
 @import "../blocks/site-header/site-header";
 @import "../blocks/site-description/site-description";
 @import "../blocks/site-about/site-about";
@@ -20,3 +24,4 @@
 @import "../blocks/map/map";
 @import "../blocks/site-footer/site-footer";
 @import "../blocks/modal-rates/modal-rates";
+@import "../blocks/site-title/site-title";

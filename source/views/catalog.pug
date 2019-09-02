@@ -24,3 +24,9 @@ block pixel-glass
         background-image: url("img/pognali-catalog-desktop-modals.jpg");
       }
     }
+
+block content
+  main
+    include ../blocks/site-title/site-title
+    +site-title({title: 'Попутчики'})(hasReturnLink=true)
+    div(style='height:1000px; background-color:gray;')
