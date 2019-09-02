@@ -94,3 +94,13 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .site-title__title {
+    margin: 82px auto 66px 65px;
+  }
+
+  .site-title__return {
+    margin-right: 30px;
+    }
+}
