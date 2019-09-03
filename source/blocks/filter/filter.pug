@@ -3,13 +3,13 @@ section(class='filter')
     h2(class='filter__title') Фильтрация по странам
     ul(class='filter__continent-list')
       li(class='filter__continent-item')
-        a(class='filter__continent-link') Европа
+        a(class='filter__continent-link filter__continent-link--active' href='#') Европа
       li(class='filter__continent-item')
-        a(class='filter__continent-link') Азия
+        a(class='filter__continent-link' href='#') Азия
       li(class='filter__continent-item')
-        a(class='filter__continent-link') Америка
+        a(class='filter__continent-link' href='#') Америка
       li(class='filter__continent-item')
-        a(class='filter__continent-link') Острова
+        a(class='filter__continent-link' href='#') Острова
     button(class='filter__collapse' type='button'
         data-closed='Показать все' data-opened='Свернуть' aria-label='Открыть/закрыть меню фильтрации по странам')
     div(class='filter__internal')
@@ -23,17 +23,21 @@ section(class='filter')
               ['у', 'ф', 'х', 'ц', 'ч'],
               ['ш', 'щ', 'э', 'ю', 'я']
             ];
-          for letterRow in letters
+          for letterRow, i in letters
             tr(class='filter__table-row')
-              for letter in letterRow
-                td(class='filter__table-cell')
-                  a(class='filter__table-link' href='#')= letter
+              for letter, j in letterRow
+                if (i != 0 || j != 0)
+                  td(class='filter__table-cell')
+                    a(class='filter__table-link' href='#')= letter
+                else
+                  td(class='filter__table-cell')
+                    a(class='filter__table-link filter__table-link--active' href='#')= letter
       ol(class='filter__group-list')
         -
           const groups = [
             {
               head: 'а',
-              body: ['Австралия', 'Австрия', 'Азербайджан', 'Албания', 'Алжир', 'Ангола', 'Андорра', 'Антигуа и Барбуда', 'Аргентина', 'Армения', 'Афганистан']
+              body: ['Австралия', 'Австрия', 'Азербайджан', 'Ангола', 'Андорра', 'Антигуа и Барбуда', 'Аргентина', 'Армения', 'Афганистан']
             },
             {
               head: 'б',
@@ -128,10 +132,17 @@ section(class='filter')
               body: ['Ямайка', 'Япония']
             }
           ];
-        for group in groups
-          li(class='filter__group-item')
-            ol(class='filter__countries-list' data-letter=`${group.head}`)
-              for country in group.body
-                li(class='filter__countries-item')
-                  a(class='filter__countries-link' href='#')= country
+        for group, k in groups
+          if k != 0
+            li(class='filter__group-item')
+              ol(class='filter__countries-list' data-letter=`${group.head}`)
+                for country in group.body
+                  li(class='filter__countries-item')
+                    a(class='filter__countries-link' href='#')= country
+          else
+            li(class='filter__group-item--active')
+              ol(class='filter__countries-list' data-letter=`${group.head}`)
+                for country in group.body
+                  li(class='filter__countries-item')
+                    a(class='filter__countries-link' href='#')= country
       button(class='filter__close' type='button') Свернуть

@@ -1,0 +1,213 @@
+.filter {
+  z-index: 10;
+  position: relative;
+  margin-top: -40px;
+  padding: 50px 0 8px 0;
+
+  font: $text-style-16-400;
+  line-height: 1.38;
+  color: $greyish-brown;
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: $pale-grey-dark;
+}
+
+.filter__container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.filter__title {
+  order: 1;
+  width: 85%;
+  margin: 6px auto 0 0;
+  padding: 0 0 0 27px;
+
+  font: $text-style-16-700;
+  line-height: 1.38;
+  color: $dark-blue-grey;
+  text-transform: uppercase;
+
+  background: top 6px left 0 / 15px 10px no-repeat url("../img/filter.svg");
+}
+
+.filter__collapse {
+  order: 2;
+  width: 20px;
+  height: 20px;
+  margin: 6px 3px 0 0;
+  padding: 0;
+
+  border: none;
+  background: center / 12px 12px no-repeat url("../img/filter-close.svg"),
+    transparent;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filter__continent-list {
+  order: 3;
+  width: 100%;
+  margin: 25px 0 10px 25px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter__continent-item {
+  margin-top: 5px;
+}
+
+.filter__continent-link {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font: $text-style-16-700;
+  line-height: 1.38;
+  color: $dark-blue-grey;
+  text-transform: uppercase;
+
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &--active {
+    opacity: 1;
+  }
+}
+
+.filter__internal {
+  order: 4;
+  width: 100%;
+}
+
+.filter__table {
+  width: calc(100% - 50px);
+  margin: 10px 25px;
+  padding: 0;
+
+  border-collapse: collapse;
+  background-color: $white;
+}
+
+.filter__table-cell {
+  position: relative;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid $cloudy-blue;
+}
+
+.filter__table-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 11px 0;
+
+  font: $text-style-14-500;
+  line-height: 1.29;
+  color: $dark-slate-blue;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    padding: 10px 0;
+
+    border: 1px solid $bluey-grey;
+  }
+
+  &:active,
+  &--active {
+    color: $white;
+
+    background-color: $dark-slate-blue;
+  }
+}
+
+.filter__group-list {
+  width: calc(100% - 50px);
+  margin: 22px 25px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter__group-item {
+  display: none;
+}
+
+.filter__countries-list {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter__countries-link {
+  font: $text-style-16-400;
+  line-height: 1.38;
+  color: $greyish-brown;
+
+  &:hover {
+    color: $dark-slate-blue;
+  }
+
+  &:active {
+    color: rgba($dark-slate-blue, 0.3);
+  }
+}
+
+.filter__close {
+  display: block;
+  width: 100%;
+  margin: 10px 0 20px 0;
+  padding: 5px 20px;
+
+  font: $text-style-16-700;
+  line-height: 1.79;
+  color: $dark;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 20px;
+
+  background-color: $light-blue-grey;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    display: inline-block;
+    width: 25px;
+    height: 12px;
+
+    background: center left 0 / 12px 12px no-repeat url("../img/filter-close.svg"),
+      transparent;
+  }
+
+  &:hover {
+    background-color: $light-blue-grey-four;
+  }
+
+  &:active {
+    color: rgba($dark, 0.3);
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
