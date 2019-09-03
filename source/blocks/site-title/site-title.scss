@@ -56,6 +56,7 @@
 
   .site-title__container {
     display: flex;
+    align-items: flex-start;
   }
 
   .site-title__title {
@@ -95,7 +96,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .site-title__title {
     margin: 82px auto 66px 65px;
   }
