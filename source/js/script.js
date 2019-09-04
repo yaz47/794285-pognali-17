@@ -110,3 +110,14 @@ if (filter) {
     }
   });
 }
+
+const search = document.querySelector('.search');
+
+if (search) {
+  document.addEventListener('click', (evt) => {
+    if (evt.target.closest('.js-search')) {
+      evt.preventDefault();
+      evt.target.closest('.search__fieldset').classList.toggle('search__fieldset--opened');
+    }
+  });
+}

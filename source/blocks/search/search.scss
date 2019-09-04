@@ -1,0 +1,53 @@
+.search {
+  position: relative;
+  padding: 10px 25px;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $dark-slate-blue;
+
+  border-radius: 20px;
+  background-color: $light-gold;
+}
+
+.search__title {
+  margin: 13px 90px 10px 0;
+  padding: 0;
+
+  font: $text-style-22-700;
+  line-height: 1;
+  color: $dark-slate-blue;
+}
+
+.search__form-container {
+  margin-top: 25px;
+}
+
+.search__fieldset {
+  position: relative;
+  margin-bottom: 10px;
+
+  border-top: 1px solid $macaroni-and-cheese;
+}
+
+.search__legend {
+  margin-top: 10px;
+  padding-right: 15px;
+
+  font: $text-style-16-700;
+  line-height: 1.13;
+  color: $dark-slate-blue;
+  text-transform: uppercase;
+}
+
+.search__fieldset-body {
+  display: none;
+}
+
+.search__fieldset--opened .search__fieldset-body {
+  display: block;
+}
+
+.search__checkbox-input {
+  width: 50px;
+}

@@ -1,0 +1,32 @@
+.companion-search {
+  z-index: 9;
+  position: relative;
+  margin-top: -40px;
+  padding: 50px 0 50px;
+
+  font: $text-style-16-300;
+  line-height: 1.38;
+  color: $dark-slate-blue;
+
+  background-color: $pale-grey-middle;
+}
+
+.companion-search__search {
+  margin: 20px 0;
+}
+
+.search__collapse {
+  position: absolute;
+  top: 18px;
+  right: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+
+  border: none;
+  border-top: 4px solid $dark-blue-grey;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}

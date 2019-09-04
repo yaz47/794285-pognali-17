@@ -11,20 +11,20 @@
     html {
       background-repeat: no-repeat;
       background-position: 50% 0;
-      background-image: url("img/pognali-catalog-mobile-modals.jpg");
+      background-image: url("img/pognali-catalog-mobile.jpg");
     }
 
     /* Tablet */
     @media (min-width: 768px) {
       html {
-        background-image: url("img/pognali-catalog-tablet-modals.jpg");
+        background-image: url("img/pognali-catalog-tablet.jpg");
       }
     }
 
     /* Desktop */
     @media (min-width: 1440px) {
       html {
-        background-image: url("img/pognali-catalog-desktop-modals.jpg");
+        background-image: url("img/pognali-catalog-desktop.jpg");
       }
     }
   </style>
@@ -486,43 +486,54 @@
           <div class="search__form-container">
             <form class="search__form" action="https://echo.htmlacademy.ru" method="POST">
               <div class="search__fieldset">
-                <div class="search__legend">Хобби:</div>
-                <ul class="search__checkbox-list">
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="gym">Спортзал</label><input class="search__checkbox-input" type="checkbox" name="gym" id="gym" checked></li>
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="hookah">Кальян</label><input class="search__checkbox-input" type="checkbox" name="hookah" id="hookah"></li>
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="couch">Диван</label><input class="search__checkbox-input" type="checkbox" name="couch" id="couch"></li>
-                </ul>
-              </div>
-              <div class="search__fieldset">
-                <div class="search__legend">Музыка:</div>
-                <ul class="search__checkbox-list">
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="rock">Тяжелый рок</label><input class="search__checkbox-input" type="checkbox" name="rock" id="rock" checked></li>
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="rap">Русский рэп</label><input class="search__checkbox-input" type="checkbox" name="rap" id="rap"></li>
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="pop">Евроденс</label><input class="search__checkbox-input" type="checkbox" name="pop" id="pop"></li>
-                </ul>
-              </div>
-              <div class="search__fieldset">
-                <div class="search__legend">Еда:</div>
-                <ul class="search__checkbox-list">
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="meat">Мясоед</label><input class="search__checkbox-input" type="checkbox" name="meat" id="meat" checked></li>
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="diet">Сидит на ПП</label><input class="search__checkbox-input" type="checkbox" name="diet" id="diet"></li>
-                  <li class="search__checkbox-item"><label class="search__checkbox-label" for="vegan">Веган-сыроед</label><input class="search__checkbox-input" type="checkbox" name="vegan" id="vegan"></li>
-                </ul>
-              </div>
-              <div class="search__fieldset">
-                <div class="search__legend">Транспорт:</div>
-                <ul class="search__checkbox-list">
-                  <li class="search__checkbox-item search__checkbox-item--badge"><label class="search__checkbox-badge" for="plane"><span class="visually-hidden">Самолет</span></label><input class="visually-hidden" type="checkbox" name="plane" id="plane" checked></li>
-                  <li class="search__checkbox-item search__checkbox-item--badge"><label class="search__checkbox-badge" for="bus"><span class="visually-hidden">Автобус</span></label><input class="visually-hidden" type="checkbox" name="bus" id="bus" checked></li>
-                  <li class="search__checkbox-item search__checkbox-item--badge"><label class="search__checkbox-badge" for="moto"><span class="visually-hidden">Мотоцикл</span></label><input class="visually-hidden" type="checkbox" name="moto" id="moto"></li>
-                  <li class="search__checkbox-item search__checkbox-item--badge"><label class="search__checkbox-badge" for="walk"><span class="visually-hidden">Пешком</span></label><input class="visually-hidden" type="checkbox" name="walk" id="walk" checked></li>
-                </ul>
-              </div>
-              <div class="search__fieldset">Левел:<div class="search__legend">Транспорт:</div>
-                <div class="search__amount-bar">
-                  <div class="search__fill-bar"></div><button class="search__handle search__handle--min" type="button" aria-label="Ручка минимума"></button><button class="search__handle search__handle--max" type="button" aria-label="Ручка максимума"></button>
+                <div class="search__legend">Хобби:</div><button class="search__collapse js-search" type="button" aria-label="Открыть/закрыть список"></button>
+                <div class="search__fieldset-body">
+                  <ul class="search__checkbox-list">
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="gym" id="gym" checked><label class="search__checkbox-label" for="gym">Спортзал</label></li>
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="hookah" id="hookah"><label class="search__checkbox-label" for="hookah">Кальян</label></li>
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="couch" id="couch"><label class="search__checkbox-label" for="couch">Диван</label></li>
+                  </ul>
                 </div>
-                <div class="search__input-wrapper"><input class="search__indication search__indication--min" type="text" name="minLvl" value="30" aria-label="Минимальная стоимость" required><input class="search__indication search__indication--max" type="text" name="maxLvl" value="100" aria-label="Максимальная стоимость" required></div>
+              </div>
+              <div class="search__fieldset search__fieldset--opened">
+                <div class="search__legend">Музыка:</div><button class="search__collapse js-search" type="button" aria-label="Открыть/закрыть список"></button>
+                <div class="search__fieldset-body">
+                  <ul class="search__checkbox-list">
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="rock" id="rock" checked><label class="search__checkbox-label" for="rock">Тяжелый рок</label></li>
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="rap" id="rap"><label class="search__checkbox-label" for="rap">Русский рэп</label></li>
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="pop" id="pop"><label class="search__checkbox-label" for="pop">Евроденс</label></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="search__fieldset">
+                <div class="search__legend">Еда:</div><button class="search__collapse js-search" type="button" aria-label="Открыть/закрыть список"></button>
+                <div class="search__fieldset-body">
+                  <ul class="search__checkbox-list">
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="meat" id="meat" checked><label class="search__checkbox-label" for="meat">Мясоед</label></li>
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="diet" id="diet"><label class="search__checkbox-label" for="diet">Сидит на ПП</label></li>
+                    <li class="search__checkbox-item"><input class="search__checkbox-input" type="checkbox" name="vegan" id="vegan"><label class="search__checkbox-label" for="vegan">Веган-сыроед</label></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="search__fieldset">
+                <div class="search__legend">Транспорт:</div><button class="search__collapse js-search" type="button" aria-label="Открыть/закрыть список"></button>
+                <div class="search__fieldset-body">
+                  <ul class="search__checkbox-list">
+                    <li class="search__checkbox-item search__checkbox-item--badge"><label class="search__checkbox-badge" for="plane"><span class="visually-hidden">Самолет</span></label><input class="visually-hidden" type="checkbox" name="plane" id="plane" checked></li>
+                    <li class="search__checkbox-item search__checkbox-item--badge"><label class="search__checkbox-badge" for="bus"><span class="visually-hidden">Автобус</span></label><input class="visually-hidden" type="checkbox" name="bus" id="bus" checked></li>
+                    <li class="search__checkbox-item search__checkbox-item--badge"><label class="search__checkbox-badge" for="moto"><span class="visually-hidden">Мотоцикл</span></label><input class="visually-hidden" type="checkbox" name="moto" id="moto"></li>
+                    <li class="search__checkbox-item search__checkbox-item--badge"><label class="search__checkbox-badge" for="walk"><span class="visually-hidden">Пешком</span></label><input class="visually-hidden" type="checkbox" name="walk" id="walk" checked></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="search__fieldset">
+                <div class="search__legend">Левел:</div><button class="search__collapse js-search" type="button" aria-label="Открыть/закрыть список"></button>
+                <div class="search__fieldset-body">
+                  <div class="search__input-wrapper"><input class="search__indication search__indication--min" type="text" name="minLvl" value="30" aria-label="Минимальная стоимость" required><input class="search__indication search__indication--max" type="text" name="maxLvl" value="100" aria-label="Максимальная стоимость" required></div>
+                  <div class="search__amount-bar">
+                    <div class="search__fill-bar"></div><button class="search__handle search__handle--min" type="button" aria-label="Ручка минимума"></button><button class="search__handle search__handle--max" type="button" aria-label="Ручка максимума"></button>
+                  </div>
+                </div>
               </div><button class="search__submit" type="submit">Показать</button>
             </form>
           </div>

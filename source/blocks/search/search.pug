@@ -5,66 +5,76 @@ mixin search()
       form(class="search__form" action="https://echo.htmlacademy.ru" method="POST")
         div(class='search__fieldset')
           div(class='search__legend') Хобби:
-          ul(class='search__checkbox-list')
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='gym') Спортзал
-              input(class='search__checkbox-input' type='checkbox' name='gym' id='gym' checked)
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='hookah') Кальян
-              input(class='search__checkbox-input' type='checkbox' name='hookah' id='hookah')
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='couch') Диван
-              input(class='search__checkbox-input' type='checkbox' name='couch' id='couch')
-        div(class='search__fieldset')
+          button(class='search__collapse js-search' type='button' aria-label='Открыть/закрыть список')
+          div(class='search__fieldset-body')
+            ul(class='search__checkbox-list')
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='gym' id='gym' checked)
+                label(class='search__checkbox-label' for='gym') Спортзал
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='hookah' id='hookah')
+                label(class='search__checkbox-label' for='hookah') Кальян
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='couch' id='couch')
+                label(class='search__checkbox-label' for='couch') Диван
+        div(class='search__fieldset search__fieldset--opened')
           div(class='search__legend') Музыка:
-          ul(class='search__checkbox-list')
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='rock') Тяжелый рок
-              input(class='search__checkbox-input' type='checkbox' name='rock' id='rock' checked)
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='rap') Русский рэп
-              input(class='search__checkbox-input' type='checkbox' name='rap' id='rap')
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='pop') Евроденс
-              input(class='search__checkbox-input' type='checkbox' name='pop' id='pop')
+          button(class='search__collapse js-search' type='button' aria-label='Открыть/закрыть список')
+          div(class='search__fieldset-body')
+            ul(class='search__checkbox-list')
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='rock' id='rock' checked)
+                label(class='search__checkbox-label' for='rock') Тяжелый рок
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='rap' id='rap')
+                label(class='search__checkbox-label' for='rap') Русский рэп
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='pop' id='pop')
+                label(class='search__checkbox-label' for='pop') Евроденс
         div(class='search__fieldset')
           div(class='search__legend') Еда:
-          ul(class='search__checkbox-list')
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='meat') Мясоед
-              input(class='search__checkbox-input' type='checkbox' name='meat' id='meat' checked)
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='diet') Сидит на ПП
-              input(class='search__checkbox-input' type='checkbox' name='diet' id='diet')
-            li(class='search__checkbox-item')
-              label(class='search__checkbox-label' for='vegan') Веган-сыроед
-              input(class='search__checkbox-input' type='checkbox' name='vegan' id='vegan')
+          button(class='search__collapse js-search' type='button' aria-label='Открыть/закрыть список')
+          div(class='search__fieldset-body')
+            ul(class='search__checkbox-list')
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='meat' id='meat' checked)
+                label(class='search__checkbox-label' for='meat') Мясоед
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='diet' id='diet')
+                label(class='search__checkbox-label' for='diet') Сидит на ПП
+              li(class='search__checkbox-item')
+                input(class='search__checkbox-input' type='checkbox' name='vegan' id='vegan')
+                label(class='search__checkbox-label' for='vegan') Веган-сыроед
         div(class='search__fieldset')
           div(class='search__legend') Транспорт:
-          ul(class='search__checkbox-list')
-            li(class='search__checkbox-item search__checkbox-item--badge')
-              label(class='search__checkbox-badge' for='plane')
-                span(class='visually-hidden') Самолет
-              input(class='visually-hidden' type='checkbox' name='plane' id='plane' checked)
-            li(class='search__checkbox-item search__checkbox-item--badge')
-              label(class='search__checkbox-badge' for='bus')
-                span(class='visually-hidden') Автобус
-              input(class='visually-hidden' type='checkbox' name='bus' id='bus' checked)
-            li(class='search__checkbox-item search__checkbox-item--badge')
-              label(class='search__checkbox-badge' for='moto')
-                span(class='visually-hidden') Мотоцикл
-              input(class='visually-hidden' type='checkbox' name='moto' id='moto')
-            li(class='search__checkbox-item search__checkbox-item--badge')
-              label(class='search__checkbox-badge' for='walk')
-                span(class='visually-hidden') Пешком
-              input(class='visually-hidden' type='checkbox' name='walk' id='walk' checked)
-        div(class='search__fieldset') Левел:
-          div(class='search__legend') Транспорт:
-          div(class='search__amount-bar')
-            div(class='search__fill-bar')
-            button(class='search__handle search__handle--min' type='button' aria-label='Ручка минимума')
-            button(class='search__handle search__handle--max' type='button' aria-label='Ручка максимума')
-          div(class='search__input-wrapper')
-            input(class='search__indication search__indication--min' type='text' name='minLvl' value='30' aria-label='Минимальная стоимость' required)
-            input(class='search__indication search__indication--max' type='text' name='maxLvl' value='100' aria-label='Максимальная стоимость' required)
+          button(class='search__collapse js-search' type='button' aria-label='Открыть/закрыть список')
+          div(class='search__fieldset-body')
+            ul(class='search__checkbox-list')
+              li(class='search__checkbox-item search__checkbox-item--badge')
+                label(class='search__checkbox-badge' for='plane')
+                  span(class='visually-hidden') Самолет
+                input(class='visually-hidden' type='checkbox' name='plane' id='plane' checked)
+              li(class='search__checkbox-item search__checkbox-item--badge')
+                label(class='search__checkbox-badge' for='bus')
+                  span(class='visually-hidden') Автобус
+                input(class='visually-hidden' type='checkbox' name='bus' id='bus' checked)
+              li(class='search__checkbox-item search__checkbox-item--badge')
+                label(class='search__checkbox-badge' for='moto')
+                  span(class='visually-hidden') Мотоцикл
+                input(class='visually-hidden' type='checkbox' name='moto' id='moto')
+              li(class='search__checkbox-item search__checkbox-item--badge')
+                label(class='search__checkbox-badge' for='walk')
+                  span(class='visually-hidden') Пешком
+                input(class='visually-hidden' type='checkbox' name='walk' id='walk' checked)
+        div(class='search__fieldset')
+          div(class='search__legend') Левел:
+          button(class='search__collapse js-search' type='button' aria-label='Открыть/закрыть список')
+          div(class='search__fieldset-body')
+            div(class='search__input-wrapper')
+              input(class='search__indication search__indication--min' type='text' name='minLvl' value='30' aria-label='Минимальная стоимость' required)
+              input(class='search__indication search__indication--max' type='text' name='maxLvl' value='100' aria-label='Максимальная стоимость' required)
+            div(class='search__amount-bar')
+              div(class='search__fill-bar')
+              button(class='search__handle search__handle--min' type='button' aria-label='Ручка минимума')
+              button(class='search__handle search__handle--max' type='button' aria-label='Ручка максимума')
         button(class='search__submit' type='submit') Показать
