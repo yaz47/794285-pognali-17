@@ -1,0 +1,23 @@
+section(class='companion-search')
+  div(class='companion-search__container container')
+    include ../search/search
+    +search()(parentClass='companion-search__search')
+    include ../card/card
+    ul(class='companion-search__card-list')
+      li(class='companion-search__card-item')
+      li(class='companion-search__card-item')
+      li(class='companion-search__card-item')
+    a(class='companion-search__more' href='#') Показать еще
+    div(class='companion-search__pagination')
+      ul(class='companion-search__pagination-list')
+        li(class='companion-search__pagination-item')
+          a(class='companion-search__pagination-link companion-search__pagination-link--current') 1
+        li(class='companion-search__pagination-item')
+          a(class='companion-search__pagination-link' href='#') 2
+        li(class='companion-search__pagination-item')
+          a(class='companion-search__pagination-link' href='#') 3
+        li(class='companion-search__pagination-item')
+          a(class='companion-search__pagination-link' href='#') 4
+      div(class='companion-search__arrows')
+          a(class='companion-search__arrow-left' href='#' aria-label='Предыдущая страница')
+          a(class='companion-search__arrow-right' href='#' aria-label='Следующая страница')
