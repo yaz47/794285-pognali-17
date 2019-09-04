@@ -135,13 +135,17 @@ section(class='filter')
         for group, k in groups
           if k != 0
             li(class='filter__group-item')
-              ol(class='filter__countries-list' data-letter=`${group.head}`)
+              ol(class='filter__countries-list')
+                li(class='filter__head-item')
+                  a(class='filter__head-link' href='#')= group.head
                 for country in group.body
                   li(class='filter__countries-item')
                     a(class='filter__countries-link' href='#')= country
           else
-            li(class='filter__group-item--active')
-              ol(class='filter__countries-list' data-letter=`${group.head}`)
+            li(class='filter__group-item filter__group-item--active')
+              ol(class='filter__countries-list')
+                li(class='filter__head-item')
+                  a(class='filter__head-link' href='#')= group.head
                 for country in group.body
                   li(class='filter__countries-item')
                     a(class='filter__countries-link' href='#')= country
