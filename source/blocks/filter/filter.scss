@@ -148,6 +148,14 @@
 
 .filter__group-item {
   display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.filter__head-item {
+  display: none;
 }
 
 .filter__countries-list {
@@ -440,6 +448,7 @@
   }
 
   .filter__head-item {
+    display: block;
     margin-bottom: 35px;
   }
 
@@ -463,5 +472,33 @@
   .filter__countries-link {
     font: $text-style-20-400;
     line-height: 1.5;
+  }
+}
+
+.filter--closed {
+  & .filter__internal {
+    display: none;
+  }
+
+  @media (max-width: $only-mobile-width) {
+    & .filter__continent-list {
+      display: none;
+    }
+  }
+
+  & .filter__collapse {
+    background-image: url('../img/dots.svg');
+    background-size: 17px 3px;
+  }
+
+  @media (min-width: $tablet-width) {
+    & .filter__collapse::before {
+      content: attr(data-closed);
+    }
+
+    & .filter__collapse {
+      background-image: url('../img/dots.svg');
+      background-size: 27px 5px;
+    }
   }
 }

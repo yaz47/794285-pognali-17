@@ -10,7 +10,7 @@ section(class='filter')
         a(class='filter__continent-link' href='#') Америка
       li(class='filter__continent-item')
         a(class='filter__continent-link' href='#') Острова
-    button(class='filter__collapse' type='button'
+    button(class='filter__collapse js-filter' type='button'
         data-closed='Показать все' data-opened='Свернуть' aria-label='Открыть/закрыть меню фильтрации по странам')
     div(class='filter__internal')
       table(class='filter__table')
@@ -149,4 +149,4 @@ section(class='filter')
                 for country in group.body
                   li(class='filter__countries-item')
                     a(class='filter__countries-link' href='#')= country
-      button(class='filter__close' type='button') Свернуть
+      button(class='filter__close js-filter' type='button') Свернуть

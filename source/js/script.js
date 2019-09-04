@@ -99,3 +99,14 @@ if (modal) {
     }
   });
 }
+
+const filter = document.querySelector('.filter');
+
+if (filter) {
+  document.addEventListener('click', (evt) => {
+    if (evt.target.closest('.js-filter')) {
+      evt.preventDefault();
+      filter.classList.toggle('filter--closed');
+    }
+  });
+}
